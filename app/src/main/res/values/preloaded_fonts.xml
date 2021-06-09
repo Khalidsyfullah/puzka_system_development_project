@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/arbutus_slab</item>
+        <item>@font/bitter</item>
+        <item>@font/brawler</item>
+        <item>@font/cherry_swash</item>
+        <item>@font/coda</item>
+        <item>@font/donegal_one</item>
+        <item>@font/merienda_one</item>
+        <item>@font/monda</item>
+        <item>@font/telex</item>
+    </array>
+</resources>
