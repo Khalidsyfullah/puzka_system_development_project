@@ -83,5 +83,18 @@
     <string name="b24">Calendar View</string>
     <string name="b25">Diary View</string>
     <string name="b26">My Notebook</string>
-    <string name="b27">Notes Here....</string>
+    <string name="b27">Enter Notes Here....</string>
+    <string name="b28">Color</string>
+    <string name="b29">Brush</string>
+    <string name="b30">Eraser</string>
+    <string name="b31">Emboss</string>
+    <string name="b32">Blur</string>
+    <string name="b33">Undo</string>
+    <string name="b34">Redo</string>
+    <string name="b35">Save Drawing</string>
+    <string name="b36">Enter Name Here: </string>
+    <string name="b37">Save</string>
+    <string name="b38">Save On Storage</string>
+    <string name="b39">drawable</string>
+    <string name="b40">My Drawing</string>
 </resources>

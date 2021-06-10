@@ -64,4 +64,8 @@ public class Centerpage extends AppCompatActivity {
     public void ontextClicked(View view){
         startActivity(new Intent(Centerpage.this, NotepadPage.class));
     }
+
+    public void onDrawingClicked(View view){
+        startActivity(new Intent(Centerpage.this, DrawingCenterpage.class));
+    }
 }

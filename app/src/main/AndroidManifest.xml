@@ -20,7 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/NewApp"
         tools:ignore="AllowBackup">
-        <activity android:name=".TextViewer"></activity>
+        <activity android:name=".DrawingCenterpage"></activity>
+        <activity
+            android:name=".DrawingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
         <activity android:name=".MyNotebook" />
         <activity android:name=".NormalNotepad" />
         <activity android:name=".DiaryActivity" />

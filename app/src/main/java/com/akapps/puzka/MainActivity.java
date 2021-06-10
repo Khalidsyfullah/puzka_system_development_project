@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         sharedPreferences = new SecurePreferences(MainActivity.this);
         firstLaunch = sharedPreferences.getBoolean("isFirstLaunch", true);
-
         if(firstLaunch){
             createAllDatabase();
             sharedPreferences.edit().putBoolean("isFirstLaunch", false).apply();
@@ -42,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         final String TABLE_NAME2 = "ChipTable";
         final String TABLE_NAME3 = "DocumentTable";
         final String TABLE_NAME4 = "DiaryTable";
+        final String TABLE_NAME5 = "DrawableTable";
         SQLiteDatabase db = MainActivity.this.openOrCreateDatabase(DATABASE_NAME, Context.MODE_PRIVATE, null);
         String COMMAND_TO_CREATE1 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME1 + "(ID INTEGER PRIMARY KEY " +
                 "AUTOINCREMENT, COLOR_CODE TEXT)";
@@ -51,11 +51,15 @@ public class MainActivity extends AppCompatActivity {
                 "AUTOINCREMENT, Type INTEGER, Label INTEGER, Title TEXT, Body TEXT, Preview TEXT)";
         String COMMAND_TO_CREATE4 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME4 + "(ID INTEGER PRIMARY KEY " +
                 "AUTOINCREMENT, YEAR INTEGER, MONTH INTEGER, DAY INTEGER, Body TEXT, Title TEXT)";
+        String COMMAND_TO_CREATE5 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME5 + "(ID INTEGER PRIMARY KEY " +
+                "AUTOINCREMENT, Bitmap TEXT, UndoBit TEXT, MainBit TEXT, Name TEXT)";
 
         db.execSQL(COMMAND_TO_CREATE1);
         db.execSQL(COMMAND_TO_CREATE2);
         db.execSQL(COMMAND_TO_CREATE3);
         db.execSQL(COMMAND_TO_CREATE4);
+        db.execSQL(COMMAND_TO_CREATE5);
+
 
         String[] strings = new String[] {"#FFFFFF", "#000000", "#123456", "#A34678", "#DFADC2", "#990099", "#003456",
                 "#667788", "#990099", "#DDDDDD"};
