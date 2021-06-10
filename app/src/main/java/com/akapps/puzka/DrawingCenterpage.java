@@ -1,8 +1,7 @@
 package com.akapps.puzka;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,10 +14,15 @@ import android.util.Base64;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.securepreferences.SecurePreferences;
@@ -30,6 +34,7 @@ public class DrawingCenterpage extends AppCompatActivity {
     FloatingActionButton fab;
     TextView backButton, sync_text;
     SharedPreferences sharedPreferences;
+    int id_num_toDelete = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Material);
@@ -135,6 +140,13 @@ public class DrawingCenterpage extends AppCompatActivity {
                 startActivity(new Intent(DrawingCenterpage.this, DrawingActivity.class));
             });
 
+            view.setOnLongClickListener(v -> {
+                id_num_toDelete = arrayList.get(position).getId();
+                PopupalertDelete popupalertDelete = new PopupalertDelete(DrawingCenterpage.this);
+                popupalertDelete.show();
+                return true;
+            });
+
             return view;
         }
     }
@@ -142,6 +154,52 @@ public class DrawingCenterpage extends AppCompatActivity {
     private Bitmap getBitmapFromString(String stringPicture) {
         byte[] decodedString = Base64.decode(stringPicture, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+    }
+
+
+    class PopupalertDelete extends Dialog {
+
+
+        public PopupalertDelete(@NonNull Context context) {
+            super(context);
+        }
+
+        @Override
+        public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.popup_confirmsave);
+            String tx1 = "Are you sure to delete this File? ";
+            TextView textView = findViewById(R.id.textView41);
+            TextView cancel = findViewById(R.id.textView29);
+            this.setCancelable(false);
+
+            Button bt1 = findViewById(R.id.button17);
+            Button bt2 = findViewById(R.id.button15);
+
+            textView.setText(tx1);
+            bt2.setOnClickListener(v -> this.dismiss());
+
+            cancel.setOnClickListener(v -> this.dismiss());
+
+            bt1.setOnClickListener(v -> {
+                this.dismiss();
+                try {
+                    if(id_num_toDelete == -1){
+                        Toast.makeText(DrawingCenterpage.this, "Invalid Document!", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    SQLiteDatabase myDatabase = DrawingCenterpage.this.openOrCreateDatabase("myDataBase", Context.MODE_PRIVATE, null);
+                    String COMM = "DELETE FROM DrawableTable WHERE ID = "+id_num_toDelete;
+                    myDatabase.execSQL(COMM);
+                    myDatabase.close();
+                    updateDrawableList();
+                    Toast.makeText(DrawingCenterpage.this, "Successfully Deleted!", Toast.LENGTH_LONG).show();
+                }catch (Exception e){
+                    Toast.makeText(DrawingCenterpage.this, "Error! "+ e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+
+            });
+        }
     }
 
 }

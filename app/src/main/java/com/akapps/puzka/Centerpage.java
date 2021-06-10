@@ -68,4 +68,12 @@ public class Centerpage extends AppCompatActivity {
     public void onDrawingClicked(View view){
         startActivity(new Intent(Centerpage.this, DrawingCenterpage.class));
     }
+
+    public void onRoutinesClicked(View view){
+        startActivity(new Intent(Centerpage.this, RoutineCerterpage.class));
+    }
+
+    public void onWalletClicked(View view){
+        startActivity(new Intent(Centerpage.this, WaletCenterpage.class));
+    }
 }

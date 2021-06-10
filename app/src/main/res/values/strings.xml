@@ -97,4 +97,21 @@
     <string name="b38">Save On Storage</string>
     <string name="b39">drawable</string>
     <string name="b40">My Drawing</string>
+    <string name="b41">Routines</string>
+    <string name="b42">Wallet</string>
+    <string name="b43">Schedule</string>
+    <string name="b44">Routine</string>
+    <string name="b45">Adjust</string>
+    <string name="b46">Transactions</string>
+    <string name="b47">Summary</string>
+    <string name="b48">Transactions</string>
+    <string name="b49">Summary</string>
+    <string name="b50">My Accounts</string>
+    <string name="b51">Total Accounts: </string>
+    <string name="b52">Total Balance: </string>
+    <string name="b53">Show Details</string>
+    <string name="b54">Add Account</string>
+    <string name="b55">Account Balance: </string>
+    <string name="b56">Add Credit</string>
+    <string name="b57">Add Debit</string>
 </resources>

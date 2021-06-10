@@ -91,5 +91,27 @@
             android:layout_marginBottom="15dp"
             android:onClick="onDrawingClicked"
             android:text="Drawing" />
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="15dp"
+            android:onClick="onRoutinesClicked"
+            android:text="@string/b41" />
+
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="15dp"
+            android:onClick="onWalletClicked"
+            android:text="@string/b42" />
     </LinearLayout>
 </ScrollView>

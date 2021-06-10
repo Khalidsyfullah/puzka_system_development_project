@@ -20,7 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/NewApp"
         tools:ignore="AllowBackup">
-        <activity android:name=".DrawingCenterpage"></activity>
+        <activity android:name=".WaletCenterpage"></activity>
+        <activity android:name=".RoutineCerterpage" />
+        <activity android:name=".DrawingCenterpage" />
         <activity
             android:name=".DrawingActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
