@@ -126,7 +126,7 @@ public class DrawingCenterpage extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if(arrayList.size() == 0){
-                return getLayoutInflater().inflate(R.layout.grid_null, null);
+                return getLayoutInflater().inflate(R.layout.grid_nuull, null);
             }
             View view = getLayoutInflater().inflate(R.layout.grid_drawvier, null );
             ImageView imageView = view.findViewById(R.id.imageView2);

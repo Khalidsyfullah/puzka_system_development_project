@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/f3"
+    android:background="@drawable/e7"
     android:orientation="vertical">
 
     <TextView
@@ -16,7 +16,7 @@
         android:fontFamily="@font/coda"
         android:gravity="center"
         android:padding="6dp"
-        android:text="@string/b9"
+        android:text="@string/c11"
         android:textColor="#5E5E5E"
         android:textSize="16sp" />
 </LinearLayout>

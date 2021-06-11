@@ -1,248 +1,524 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ECECEC">
+    android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/buttoPo"
+        style="@android:style/Widget.Material.Light.Button.Borderless"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:backgroundTint="#2196F3"
+        android:fontFamily="@font/coda"
+        android:text="@string/c4"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/llo4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="6dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/f8"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="5dp">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="15dp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/a1"
-                app:srcCompat="@drawable/bank" />
-
-            <TextView
-                android:id="@+id/textView75"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/b50"
-                android:textColor="#2C2C2C"
-                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView78"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/b51"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/textView76"
-                    android:layout_width="80dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:textColor="#00638F"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView79"
+                    android:id="@+id/textView80"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/f6"
+                    android:fontFamily="@font/arbutus_slab"
+                    android:gravity="center"
+                    android:text="@string/b57"
+                    android:textColor="#5E5E5E" />
+
+                <TextView
+                    android:id="@+id/textView81"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/f6"
+                    android:fontFamily="@font/arbutus_slab"
+                    android:gravity="center"
+                    android:text="@string/b58"
+                    android:textColor="#5E5E5E" />
+
+                <TextView
+                    android:id="@+id/textView82"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/f6"
+                    android:fontFamily="@font/arbutus_slab"
+                    android:gravity="center"
+                    android:text="@string/b59"
+                    android:textColor="#5E5E5E" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/g1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView84"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="@font/coda"
                     android:gravity="center"
-                    android:text="@string/b52"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="2dp"
+                    android:text="@string/b60"
+                    android:textColor="#575757"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/textView77"
-                    android:layout_width="80dp"
+                <com.akapps.puzka.LinedTextView
+                    android:id="@+id/textView85"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:textColor="#00638F"
+                    android:layout_weight="3"
+                    android:padding="15dp"
+                    android:textColor="#575757"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="6dp"
+                android:hint="@string/b62"
+                android:orientation="horizontal"
+                app:boxBackgroundColor="#ECECEC"
+                app:boxBackgroundMode="filled">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/filled_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    tools:ignore="LabelFor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="6dp"
+                android:hint="@string/b61">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/tyyyyy"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="6dp"
+                android:hint="@string/b64"
+                android:orientation="horizontal"
+                app:boxBackgroundColor="#ECECEC"
+                app:boxBackgroundMode="filled">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/filled_exposed_dropdown1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    tools:ignore="LabelFor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="6dp"
+                android:hint="@string/c10">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="6dp"
+                android:hint="@string/b63">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/butto6n"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:backgroundTint="#0085C1"
+                    android:fontFamily="@font/coda"
+                    android:text="@string/c1"
+                    android:textColor="#131313"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/butto6n2"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:backgroundTint="#FF689B"
+                    android:fontFamily="@font/coda"
+                    android:text="@string/c2"
+                    android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/button25"
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="2dp"
-                android:background="@null"
-                android:fontFamily="@font/arbutus_slab"
-                android:padding="3dp"
-                android:text="@string/b53"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/button26"
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="5dp"
-                android:background="@null"
-                android:backgroundTint="#0097DC"
-                android:fontFamily="@font/arbutus_slab"
-                android:padding="3dp"
-                android:text="@string/b54"
-                android:textColor="#000000"
-                android:textSize="14sp" />
-
         </LinearLayout>
+    </ScrollView>
+
+    <GridView
+        android:id="@+id/grid_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="#F3F3F3"
+        android:verticalSpacing="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttoPo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECECEC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="6dp"
-            android:background="@drawable/f8"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="5dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="15dp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/a1"
-                app:srcCompat="@drawable/money" />
-
-            <TextView
-                android:id="@+id/textVie"
+            <LinearLayout
+                android:id="@+id/llo1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/b55"
-                android:textColor="#2C2C2C"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textVie2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="sans-serif"
-                android:gravity="center"
-                android:padding="5dp"
-                android:textColor="#005598"
-                android:textSize="22sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="6dp"
-            android:background="@drawable/f8"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="5dp">
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="15dp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/a1"
-                app:srcCompat="@drawable/moneytransfer" />
-
-            <TextView
-                android:id="@+id/textView765"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/b48"
-                android:textColor="#2C2C2C"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/butto6n25"
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="2dp"
-                android:background="@null"
-                android:backgroundTint="#FF9800"
-                android:fontFamily="@font/arbutus_slab"
-                android:padding="3dp"
-                android:text="@string/b56"
-                android:textColor="#131313"
-                android:textSize="14sp" />
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/f8"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="visible">
 
-            <Button
-                android:id="@+id/button266"
-                style="@android:style/Widget.Material.Light.Button.Borderless"
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/a1"
+                    app:srcCompat="@drawable/bank" />
+
+                <TextView
+                    android:id="@+id/textView75"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/b50"
+                    android:textColor="#2C2C2C"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView78"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/b51"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView76"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="#00638F"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView79"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/b52"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="#00638F"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button25"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@null"
+                    android:fontFamily="@font/arbutus_slab"
+                    android:padding="3dp"
+                    android:text="@string/b53"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/button26"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@null"
+                    android:backgroundTint="#0097DC"
+                    android:fontFamily="@font/arbutus_slab"
+                    android:padding="3dp"
+                    android:text="@string/b54"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llo2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="5dp"
-                android:background="@null"
-                android:backgroundTint="#E91E63"
-                android:fontFamily="@font/arbutus_slab"
-                android:padding="3dp"
-                android:text="@string/b57"
-                android:textColor="#000000"
-                android:textSize="14sp" />
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/f8"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/a1"
+                    app:srcCompat="@drawable/money" />
+
+                <TextView
+                    android:id="@+id/textVie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/b55"
+                    android:textColor="#2C2C2C"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textColor="#005598"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llo3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/f8"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/a1"
+                    app:srcCompat="@drawable/moneytransfer" />
+
+                <TextView
+                    android:id="@+id/textView765"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/b48"
+                    android:textColor="#2C2C2C"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/butto6n25"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@null"
+                    android:backgroundTint="#FF9800"
+                    android:fontFamily="@font/arbutus_slab"
+                    android:padding="3dp"
+                    android:text="@string/b56"
+                    android:textColor="#131313"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
+    </ScrollView>
 
 
-    </LinearLayout>
-</ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

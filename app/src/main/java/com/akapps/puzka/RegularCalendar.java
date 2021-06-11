@@ -230,11 +230,9 @@ public class RegularCalendar extends Fragment{
                                 sharedPreferences.edit().putInt("diaryIDf", diaryClass.getId()).apply();
                                 ((DiaryActivity) requireActivity()).change_Activity();
                             });
-
                             break;
                         }
                     }
-                    isHandled = false;
                 }
                 if(!isHandled){
                     view.setOnClickListener(v -> {
@@ -244,6 +242,7 @@ public class RegularCalendar extends Fragment{
                         ((DiaryActivity) requireActivity()).change_Activity();
                     });
                 }
+                isHandled = false;
             }
 
 
