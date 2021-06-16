@@ -1,16 +1,15 @@
 package com.akapps.puzka;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -22,6 +21,7 @@ public class Centerpage extends AppCompatActivity {
     TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Material1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_centerpage);
         tabLayout = findViewById(R.id.tablayout);
@@ -36,8 +36,16 @@ public class Centerpage extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 Objects.requireNonNull(tab.getIcon()).setColorFilter(Color.parseColor(selectedColor), PorterDuff.Mode.SRC_IN);
-                //int numoi = tab.getPosition();
-                startActivity(new Intent(Centerpage.this, DiaryActivity.class));
+                if(tab.getPosition() == 0){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, new Homepage()).commit();
+                }
+                else if(tab.getPosition() == 1){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, new FragmentMenu()).commit();
+                }
+                else {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, new FragmentSettings()).commit();
+                }
+
             }
 
             @Override
@@ -57,23 +65,38 @@ public class Centerpage extends AppCompatActivity {
         }
     }
 
-    public void onimgClicked(View view){
-        startActivity(new Intent(Centerpage.this, ImageToPdf.class));
-    }
 
-    public void ontextClicked(View view){
+
+
+
+    public void notepadPageOpen()
+    {
         startActivity(new Intent(Centerpage.this, NotepadPage.class));
     }
 
-    public void onDrawingClicked(View view){
+    public void drawingPage()
+    {
         startActivity(new Intent(Centerpage.this, DrawingCenterpage.class));
     }
 
-    public void onRoutinesClicked(View view){
+    public void diaryPage()
+    {
+        startActivity(new Intent(Centerpage.this, DiaryActivity.class));
+    }
+
+    public void walletPage()
+    {
+        startActivity(new Intent(Centerpage.this, WaletCenterpage.class));
+    }
+
+    public void routinePage()
+    {
         startActivity(new Intent(Centerpage.this, RoutineCerterpage.class));
     }
 
-    public void onWalletClicked(View view){
-        startActivity(new Intent(Centerpage.this, WaletCenterpage.class));
+    public void imagePageCerter()
+    {
+        startActivity(new Intent(Centerpage.this, ImageToPdf.class));
     }
+
 }

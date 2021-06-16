@@ -14,30 +14,46 @@ import android.widget.DatePicker;
 import android.widget.TimePicker;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.textfield.TextInputLayout;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 public class RoutineCerterpage extends AppCompatActivity {
     TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Material);
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_routine_certerpage);
         tabLayout = findViewById(R.id.tablayout);
+        getSupportFragmentManager().beginTransaction().add(R.id.frame_lay, new RoutineSchedule()).commit();
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+                if(tab.getPosition() == 0){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame_lay, new RoutineSchedule()).commit();
+                }
+
+                else if(tab.getPosition() == 1){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame_lay, new RoutinemainRoute()).commit();
+                }
+                else if(tab.getPosition() == 2){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame_lay, new RoutineAdjust()).commit();
+                }
+                else{
+                    //TODO
+                }
+
                 /*DialogFragment newFragment = new TimePickerFragment();
                 newFragment.show(getSupportFragmentManager(), "timePicker");*/
 
-                DialogFragment newFragment = new DatePickerFragment();
-                newFragment.show(getSupportFragmentManager(), "datePicker");
+                /*DialogFragment newFragment = new DatePickerFragment();
+                newFragment.show(getSupportFragmentManager(), "datePicker");*/
 
             }
 
@@ -54,8 +70,12 @@ public class RoutineCerterpage extends AppCompatActivity {
     }
 
 
-    public static class TimePickerFragment extends DialogFragment
-            implements TimePickerDialog.OnTimeSetListener {
+    public static class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
+        TextInputLayout textInputLayout;
+
+        public TimePickerFragment(TextInputLayout textInputLayout) {
+            this.textInputLayout = textInputLayout;
+        }
 
         @NotNull
         @Override
@@ -69,13 +89,19 @@ public class RoutineCerterpage extends AppCompatActivity {
         }
 
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-
+            String str = hourOfDay + ":"+ minute;
+            Objects.requireNonNull(textInputLayout.getEditText()).setText(str);
         }
     }
 
 
-    public static class DatePickerFragment extends DialogFragment
-            implements DatePickerDialog.OnDateSetListener {
+    public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+
+        TextInputLayout textInputLayout;
+
+        public DatePickerFragment(TextInputLayout textInputLayout) {
+            this.textInputLayout = textInputLayout;
+        }
 
         @NotNull
         @Override
@@ -89,7 +115,17 @@ public class RoutineCerterpage extends AppCompatActivity {
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            // Do something with the date chosen by the user
+            int m = month + 1;
+            String mont = String.valueOf(m);
+            if(m< 10){
+                mont = "0"+mont;
+            }
+            String ds = String.valueOf(day);
+            if(day< 10){
+                ds = "0"+ds;
+            }
+            String date = ds + "/"+mont + "/"+ year;
+            Objects.requireNonNull(textInputLayout.getEditText()).setText(date);
         }
     }
 

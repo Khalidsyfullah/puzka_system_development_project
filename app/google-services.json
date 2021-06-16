@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "554139525958",
+    "project_id": "puzka-2b5f8",
+    "storage_bucket": "puzka-2b5f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554139525958:android:16913bd2c6e3e6e19fbb47",
+        "android_client_info": {
+          "package_name": "com.akapps.puzka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554139525958-6lgqm1nvvn4o7gvjpilp9epo240qul4m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akapps.puzka",
+            "certificate_hash": "e39f2fe5866e16eea55395c9fcdfa8ee87719e76"
+          }
+        },
+        {
+          "client_id": "554139525958-i5oom9m02iu9dp7csuffuac9bn9ipk35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5avx9a7zf9a7fFx57vWZpqyRaEzW1VNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554139525958-i5oom9m02iu9dp7csuffuac9bn9ipk35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -35,6 +35,14 @@
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
     </style>
 
+
+    <style name="WhiteMaterial" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
     <style name="AppTabTextAppearance1" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">12sp</item>
         <item name="android:fontFamily">@font/arbutus_slab</item>
@@ -52,6 +60,14 @@
         <item name="android:progressTint">#3E3E3E</item>
         <item name="android:thumbTint">#CDCACC</item>
         <item name="android:height">30dp</item>
+    </style>
+
+
+    <style name="Material1" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#E91E63</item>
+        <item name="colorPrimaryDark">#E91E63</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
     </style>
 
 </resources>

@@ -297,6 +297,107 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/llo2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/f8"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/a1"
+                    app:srcCompat="@drawable/money" />
+
+                <TextView
+                    android:id="@+id/textVie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/b55"
+                    android:textColor="#2C2C2C"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textVie2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textColor="#005598"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llo3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/f8"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/a1"
+                    app:srcCompat="@drawable/moneytransfer" />
+
+                <TextView
+                    android:id="@+id/textView765"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/b48"
+                    android:textColor="#2C2C2C"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/butto6n25"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@null"
+                    android:backgroundTint="#FF9800"
+                    android:fontFamily="@font/arbutus_slab"
+                    android:padding="3dp"
+                    android:text="@string/b56"
+                    android:textColor="#131313"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/llo1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -409,107 +510,6 @@
                     android:padding="3dp"
                     android:text="@string/b54"
                     android:textColor="#000000"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llo2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/f8"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="5dp">
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="15dp"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/a1"
-                    app:srcCompat="@drawable/money" />
-
-                <TextView
-                    android:id="@+id/textVie"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="@string/b55"
-                    android:textColor="#2C2C2C"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/textVie2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:textColor="#005598"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llo3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/f8"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="5dp">
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="15dp"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/a1"
-                    app:srcCompat="@drawable/moneytransfer" />
-
-                <TextView
-                    android:id="@+id/textView765"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="@string/b48"
-                    android:textColor="#2C2C2C"
-                    android:textSize="20sp" />
-
-                <Button
-                    android:id="@+id/butto6n25"
-                    style="@android:style/Widget.Material.Light.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="2dp"
-                    android:background="@null"
-                    android:backgroundTint="#FF9800"
-                    android:fontFamily="@font/arbutus_slab"
-                    android:padding="3dp"
-                    android:text="@string/b56"
-                    android:textColor="#131313"
                     android:textSize="14sp" />
 
             </LinearLayout>

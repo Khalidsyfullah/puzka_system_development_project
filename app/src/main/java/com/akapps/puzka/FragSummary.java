@@ -44,7 +44,6 @@ public class FragSummary extends Fragment {
         linedTextView = view.findViewById(R.id.textView85);
         @SuppressLint("SimpleDateFormat") DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         currentdate = dateFormat.format(new Date());
-        linedTextView.setText(currentdate);
 
         gridView = view.findViewById(R.id.grid_transaction);
         search = view.findViewById(R.id.butto6n3);
@@ -135,6 +134,7 @@ public class FragSummary extends Fragment {
             return position;
         }
 
+        @SuppressLint("InflateParams")
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if(arrayList.size() == 0){

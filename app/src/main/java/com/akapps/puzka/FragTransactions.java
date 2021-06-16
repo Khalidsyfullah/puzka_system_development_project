@@ -13,7 +13,6 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.BaseAdapter;
@@ -128,21 +127,15 @@ public class FragTransactions extends Fragment {
 
         updateAccountDatabase();
 
-        fromAccount.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                from_account_name = accountList.get(position).getName();
-                amount.setError("Available Balance ( "+ accountList.get(position).getBalance()+ " )");
-                current_from_account_balance = accountList.get(position).getBalance();
-            }
+        fromAccount.setOnItemClickListener((parent, view1, position, id) -> {
+            from_account_name = accountList.get(position).getName();
+            amount.setError("Available Balance ( "+ accountList.get(position).getBalance()+ " )");
+            current_from_account_balance = accountList.get(position).getBalance();
         });
 
-        toAccount.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                to_account_name = accountList.get(position).getName();
-                current_toaccount_balance = accountList.get(position).getBalance();
-            }
+        toAccount.setOnItemClickListener((parent, view12, position, id) -> {
+            to_account_name = accountList.get(position).getName();
+            current_toaccount_balance = accountList.get(position).getBalance();
         });
 
 

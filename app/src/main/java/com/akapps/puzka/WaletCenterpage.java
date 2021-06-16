@@ -61,6 +61,8 @@ public class WaletCenterpage extends AppCompatActivity {
             super(fragmentManager, lifecycle);
         }
 
+
+
         @NonNull
         @Override
         public Fragment createFragment(int position) {

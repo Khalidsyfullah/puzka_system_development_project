@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,16 +22,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         sharedPreferences = new SecurePreferences(MainActivity.this);
         firstLaunch = sharedPreferences.getBoolean("isFirstLaunch", true);
         if(firstLaunch){
             createAllDatabase();
             sharedPreferences.edit().putBoolean("isFirstLaunch", false).apply();
-            new Handler(Looper.getMainLooper()).postDelayed(() -> startActivity(new Intent(MainActivity.this, Centerpage.class)), 5000);
+            new Handler(Looper.getMainLooper()).postDelayed(() -> startActivity(new Intent(
+                    MainActivity.this, Centerpage.class)), 4000);
         }
         else{
-            startActivity(new Intent(MainActivity.this, Centerpage.class));
+            new Handler(Looper.getMainLooper()).postDelayed(() -> startActivity(new Intent(
+                    MainActivity.this, Centerpage.class)), 2500);
         }
 
 
@@ -44,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
         final String TABLE_NAME5 = "DrawableTable";
         final String TABLE_NAME6 = "AccountTable";
         final String TABLE_NAME7 = "TransactionTable";
+        final String TABLE_NAME8 = "DailyRoutineTable";
+        final String TABLE_NAME9 = "WeeklyRoutineTable";
+        final String TABLE_NAME10 = "AcademicTable";
+
         SQLiteDatabase db = MainActivity.this.openOrCreateDatabase(DATABASE_NAME, Context.MODE_PRIVATE, null);
         String COMMAND_TO_CREATE1 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME1 + "(ID INTEGER PRIMARY KEY " +
                 "AUTOINCREMENT, COLOR_CODE TEXT)";
@@ -59,7 +69,12 @@ public class MainActivity extends AppCompatActivity {
                 "AUTOINCREMENT, Name TEXT, Type TEXT, Balance REAL)";
         String COMMAND_TO_CREATE7 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME7 + "(ID INTEGER PRIMARY KEY " +
                 "AUTOINCREMENT, Date TEXT, Account TEXT, Notes TEXT, Amount REAL, Echarges REAL, Type INTEGER)";
-
+        String COMMAND_TO_CREATE8 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME8 + "(Day INTEGER, Month INTEGER, " +
+                "Year INTEGER, Routine TEXT, PRIMARY KEY (Day, Month, Year))";
+        String COMMAND_TO_CREATE9 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME9 + "(ID INTEGER PRIMARY KEY " +
+                "AUTOINCREMENT, Date TEXT, Account TEXT, Notes TEXT, Amount REAL, Echarges REAL, Type INTEGER)";
+        String COMMAND_TO_CREATE10 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME10 + "(ID INTEGER PRIMARY KEY " +
+                "AUTOINCREMENT, Date TEXT, Account TEXT, Notes TEXT, Amount REAL, Echarges REAL, Type INTEGER)";
 
         db.execSQL(COMMAND_TO_CREATE1);
         db.execSQL(COMMAND_TO_CREATE2);
@@ -68,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL(COMMAND_TO_CREATE5);
         db.execSQL(COMMAND_TO_CREATE6);
         db.execSQL(COMMAND_TO_CREATE7);
+        db.execSQL(COMMAND_TO_CREATE8);
 
-
-        String[] strings = new String[] {"#FFFFFF", "#000000", "#123456", "#A34678", "#DFADC2", "#990099", "#003456",
+        /*String[] strings = new String[] {"#FFFFFF", "#000000", "#123456", "#A34678", "#DFADC2", "#990099", "#003456",
                 "#667788", "#990099", "#DDDDDD"};
         String[] chips = new String[] {"All", "Important", "Work"};
 
@@ -91,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         contentValues.put("Type", "Cash-Account");
         contentValues.put("Balance", 0.0);
 
-        db.insert(TABLE_NAME6, null, contentValues);
+        db.insert(TABLE_NAME6, null, contentValues);*/
 
         db.close();
     }
