@@ -219,7 +219,6 @@ public class FragChildCalendar extends Fragment {
         }
         all_details.setVisibility(View.GONE);
         no_textFound.setVisibility(View.GONE);
-        String text = "";
         SQLiteDatabase db = myContex.openOrCreateDatabase("myDataBase", Context.MODE_PRIVATE, null);
         final String TABLE_NAME = "DailyRoutineTable";
         String COMM1 = "SELECT COUNT(*) FROM "+TABLE_NAME + " WHERE Month = "+m + " AND Year ="+ y;
@@ -438,7 +437,7 @@ public class FragChildCalendar extends Fragment {
             @SuppressLint({"ViewHolder", "InflateParams"}) View view = getLayoutInflater().inflate(R.layout.grid_tasks, null);
             RatingBar ratingBar = view.findViewById(R.id.ratingBar);
             TextView textView = view.findViewById(R.id.textView110);
-            String str = "<u><font color='blue'>"+ bList.get(position).getTitle() + "</font></u><br><br><b>Start Time: </b>"+
+            String str = "<b><big>"+ bList.get(position).getTitle() + "</big></b><br><b>Start Time: </b>"+
                     bList.get(position).getBegin_hour()+ ":"+ bList.get(position).getBegin_minute()+ "<br><b> End Time:  </b>"+
                     bList.get(position).getEnd_hour() + ":"+bList.get(position).getEnd_minute();
             ratingBar.setRating(bList.get(position).getImportance_level());

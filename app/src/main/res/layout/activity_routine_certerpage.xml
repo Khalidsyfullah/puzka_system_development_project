@@ -50,13 +50,6 @@
             android:icon="@drawable/ic_pencil_val"
             android:text="@string/b45" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabItem2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_academic"
-            android:text="@string/c25" />
-
     </com.google.android.material.tabs.TabLayout>
 
     <FrameLayout

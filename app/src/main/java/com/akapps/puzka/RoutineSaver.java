@@ -1,7 +1,5 @@
 package com.akapps.puzka;
 
-import java.util.ArrayList;
-
 public class RoutineSaver {
     int day, month, year;
     String list;

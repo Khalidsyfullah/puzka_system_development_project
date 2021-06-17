@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         String COMMAND_TO_CREATE8 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME8 + "(Day INTEGER, Month INTEGER, " +
                 "Year INTEGER, Routine TEXT, PRIMARY KEY (Day, Month, Year))";
         String COMMAND_TO_CREATE9 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME9 + "(ID INTEGER PRIMARY KEY " +
-                "AUTOINCREMENT, Date TEXT, Account TEXT, Notes TEXT, Amount REAL, Echarges REAL, Type INTEGER)";
+                "AUTOINCREMENT, Value TEXT)";
         String COMMAND_TO_CREATE10 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME10 + "(ID INTEGER PRIMARY KEY " +
                 "AUTOINCREMENT, Date TEXT, Account TEXT, Notes TEXT, Amount REAL, Echarges REAL, Type INTEGER)";
 
@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL(COMMAND_TO_CREATE6);
         db.execSQL(COMMAND_TO_CREATE7);
         db.execSQL(COMMAND_TO_CREATE8);
+        db.execSQL(COMMAND_TO_CREATE9);
 
         /*String[] strings = new String[] {"#FFFFFF", "#000000", "#123456", "#A34678", "#DFADC2", "#990099", "#003456",
                 "#667788", "#990099", "#DDDDDD"};
@@ -107,6 +108,13 @@ public class MainActivity extends AppCompatActivity {
         contentValues.put("Balance", 0.0);
 
         db.insert(TABLE_NAME6, null, contentValues);*/
+
+        for(int i=0; i<7; i++){
+            ContentValues cv = new ContentValues();
+            cv.put("Value", "nil");
+            db.insert(TABLE_NAME9, null, cv);
+        }
+
 
         db.close();
     }

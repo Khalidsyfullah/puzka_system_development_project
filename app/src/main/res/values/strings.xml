@@ -169,4 +169,18 @@
     <string name="c46">Friday</string>
     <string name="c47">Saturday</string>
     <string name="c48">Weekly Routine</string>
+    <string name="c49">Enter Title....</string>
+    <string name="c50">Add Description....</string>
+    <string name="c51">Start Time</string>
+    <string name="c52">End Time</string>
+    <string name="c53">Add</string>
+    <string name="c54">Add Schedule</string>
+    <string name="c55">Cancel</string>
+    <string name="c56">Upcoming Schedule</string>
+    <string name="c57">Today</string>
+    <string name="c58">Tomorrow</string>
+    <string name="c59">Next Three Days</string>
+    <string name="c60">This Week</string>
+    <string name="c61">Importance: </string>
+    <string name="c62">No Routine Found!</string>
 </resources>

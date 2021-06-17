@@ -28,6 +28,8 @@ public class RoutineCerterpage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Material);
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_routine_certerpage);
         tabLayout = findViewById(R.id.tablayout);
         getSupportFragmentManager().beginTransaction().add(R.id.frame_lay, new RoutineSchedule()).commit();
@@ -45,15 +47,6 @@ public class RoutineCerterpage extends AppCompatActivity {
                 else if(tab.getPosition() == 2){
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame_lay, new RoutineAdjust()).commit();
                 }
-                else{
-                    //TODO
-                }
-
-                /*DialogFragment newFragment = new TimePickerFragment();
-                newFragment.show(getSupportFragmentManager(), "timePicker");*/
-
-                /*DialogFragment newFragment = new DatePickerFragment();
-                newFragment.show(getSupportFragmentManager(), "datePicker");*/
 
             }
 

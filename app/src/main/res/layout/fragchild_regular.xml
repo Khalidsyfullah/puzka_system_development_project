@@ -14,11 +14,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/f7"
             android:gravity="end"
             android:orientation="vertical"
             android:padding="8dp"
@@ -31,7 +30,7 @@
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/donegal_one"
                 android:gravity="center"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:text="@string/c36"
                 android:textColor="#008AF8"
                 android:textSize="24sp" />
