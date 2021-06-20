@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import org.jetbrains.annotations.NotNull;
 
 public class FragmentMenu extends Fragment {
-    Button notepad, drawing, diary, wallet, routine, pdf;
+    Button notepad, drawing, diary, wallet, routine, pdf, notes, links;
     @Nullable
     @org.jetbrains.annotations.Nullable
     @Override
@@ -25,6 +25,8 @@ public class FragmentMenu extends Fragment {
         wallet = view.findViewById(R.id.button26);
         routine = view.findViewById(R.id.button27);
         pdf = view.findViewById(R.id.button28);
+        notes = view.findViewById(R.id.button29);
+        links = view.findViewById(R.id.button30);
 
         notepad.setOnClickListener(v -> ((Centerpage) requireActivity()).notepadPageOpen());
 
@@ -37,6 +39,10 @@ public class FragmentMenu extends Fragment {
         routine.setOnClickListener(v -> ((Centerpage) requireActivity()).routinePage());
 
         pdf.setOnClickListener(v -> ((Centerpage) requireActivity()).imagePageCerter());
+
+        links.setOnClickListener(v -> ((Centerpage) requireActivity()).startLinks());
+
+        notes.setOnClickListener(v -> ((Centerpage) requireActivity()).startNotes());
 
         return view;
     }

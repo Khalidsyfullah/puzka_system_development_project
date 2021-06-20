@@ -19,7 +19,6 @@
             android:gravity="center"
             android:paddingStart="52dp"
             android:paddingEnd="2dp"
-            android:text="@string/b19"
             android:textColor="#00158C"
             android:textSize="20sp" />
 
@@ -33,12 +32,17 @@
 
     </LinearLayout>
 
-    <TextView
+    <EditText
         android:id="@+id/textView41"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:autofillHints="@string/c49"
+        android:background="@color/white"
+        android:hint="@string/c66"
+        android:inputType="textMultiLine"
         android:padding="8dp"
-        android:text="@string/b20"
         android:textColor="#2B2B2B"
         android:textSize="16sp" />
 
@@ -59,9 +63,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="6dp"
             android:layout_weight="1"
-            android:background="@drawable/f6"
-            android:backgroundTint="@null"
-            android:text="@string/b17" />
+            android:background="@null"
+            android:backgroundTint="#004942"
+            android:text="@string/c69" />
 
         <Button
             android:id="@+id/button15"
@@ -69,9 +73,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/f6"
-            android:backgroundTint="@null"
-            android:text="@string/b18" />
+            android:background="@null"
+            android:backgroundTint="#F44336"
+            android:text="@string/c70" />
     </LinearLayout>
 
 </LinearLayout>

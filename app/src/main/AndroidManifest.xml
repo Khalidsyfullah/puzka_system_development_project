@@ -20,6 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/NewApp"
         tools:ignore="AllowBackup">
+        <activity android:name=".AuthenticatorActivity"></activity>
+        <activity android:name=".GoogleSignIn" />
+        <activity android:name=".StartPage" />
+        <activity android:name=".NotesActivity" />
+        <activity android:name=".LinksActivity" />
         <activity android:name=".WaletCenterpage" />
         <activity android:name=".RoutineCerterpage" />
         <activity android:name=".DrawingCenterpage" />

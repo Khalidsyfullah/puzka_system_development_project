@@ -30,12 +30,18 @@ public class MainActivity extends AppCompatActivity {
         if(firstLaunch){
             createAllDatabase();
             sharedPreferences.edit().putBoolean("isFirstLaunch", false).apply();
-            new Handler(Looper.getMainLooper()).postDelayed(() -> startActivity(new Intent(
-                    MainActivity.this, Centerpage.class)), 4000);
+            new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                startActivity(new Intent(MainActivity.this, StartPage.class));
+                finish();
+            }, 4000);
         }
         else{
-            new Handler(Looper.getMainLooper()).postDelayed(() -> startActivity(new Intent(
-                    MainActivity.this, Centerpage.class)), 2500);
+            new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                startActivity(new Intent(MainActivity.this, StartPage.class));
+                finish();
+            }, 1500);
+
+
         }
 
 
@@ -52,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         final String TABLE_NAME7 = "TransactionTable";
         final String TABLE_NAME8 = "DailyRoutineTable";
         final String TABLE_NAME9 = "WeeklyRoutineTable";
-        final String TABLE_NAME10 = "AcademicTable";
+        final String TABLE_NAME10 = "NotesTable";
+        final String TABLE_NAME11 = "LinksTable";
 
         SQLiteDatabase db = MainActivity.this.openOrCreateDatabase(DATABASE_NAME, Context.MODE_PRIVATE, null);
         String COMMAND_TO_CREATE1 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME1 + "(ID INTEGER PRIMARY KEY " +
@@ -74,7 +81,9 @@ public class MainActivity extends AppCompatActivity {
         String COMMAND_TO_CREATE9 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME9 + "(ID INTEGER PRIMARY KEY " +
                 "AUTOINCREMENT, Value TEXT)";
         String COMMAND_TO_CREATE10 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME10 + "(ID INTEGER PRIMARY KEY " +
-                "AUTOINCREMENT, Date TEXT, Account TEXT, Notes TEXT, Amount REAL, Echarges REAL, Type INTEGER)";
+                "AUTOINCREMENT, Date TEXT, Notes TEXT)";
+        String COMMAND_TO_CREATE11 = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME11 + "(ID INTEGER PRIMARY KEY " +
+                "AUTOINCREMENT, Date TEXT, Links TEXT)";
 
         db.execSQL(COMMAND_TO_CREATE1);
         db.execSQL(COMMAND_TO_CREATE2);
@@ -85,8 +94,10 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL(COMMAND_TO_CREATE7);
         db.execSQL(COMMAND_TO_CREATE8);
         db.execSQL(COMMAND_TO_CREATE9);
+        db.execSQL(COMMAND_TO_CREATE10);
+        db.execSQL(COMMAND_TO_CREATE11);
 
-        /*String[] strings = new String[] {"#FFFFFF", "#000000", "#123456", "#A34678", "#DFADC2", "#990099", "#003456",
+        String[] strings = new String[] {"#FFFFFF", "#000000", "#123456", "#A34678", "#DFADC2", "#990099", "#003456",
                 "#667788", "#990099", "#DDDDDD"};
         String[] chips = new String[] {"All", "Important", "Work"};
 
@@ -107,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         contentValues.put("Type", "Cash-Account");
         contentValues.put("Balance", 0.0);
 
-        db.insert(TABLE_NAME6, null, contentValues);*/
+        db.insert(TABLE_NAME6, null, contentValues);
 
         for(int i=0; i<7; i++){
             ContentValues cv = new ContentValues();

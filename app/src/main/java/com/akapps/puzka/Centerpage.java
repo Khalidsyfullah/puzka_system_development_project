@@ -94,6 +94,16 @@ public class Centerpage extends AppCompatActivity {
         startActivity(new Intent(Centerpage.this, RoutineCerterpage.class));
     }
 
+    public void startLinks()
+    {
+        startActivity(new Intent(Centerpage.this, LinksActivity.class));
+    }
+
+    public void startNotes()
+    {
+        startActivity(new Intent(Centerpage.this, NotesActivity.class));
+    }
+
     public void imagePageCerter()
     {
         startActivity(new Intent(Centerpage.this, ImageToPdf.class));

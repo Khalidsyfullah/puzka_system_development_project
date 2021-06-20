@@ -191,7 +191,6 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
             android:background="@drawable/g2"
             android:orientation="vertical">
 
@@ -217,6 +216,79 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:backgroundTint="#3F51B5"
+                android:text="@string/c17"
+                app:icon="@drawable/ic_baseline_arrow" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/g2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView104"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/coda"
+                android:gravity="center|start"
+                android:padding="8dp"
+                android:text="@string/c63"
+                android:textColor="#353535"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#FF9800"
+                android:text="@string/c17"
+                app:icon="@drawable/ic_baseline_arrow" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/g2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView105"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/coda"
+                android:gravity="center|end"
+                android:padding="8dp"
+                android:text="@string/c64"
+                android:textColor="#353535"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#F44336"
                 android:text="@string/c17"
                 app:icon="@drawable/ic_baseline_arrow" />
         </LinearLayout>
