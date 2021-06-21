@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             new Handler(Looper.getMainLooper()).postDelayed(() -> {
-                startActivity(new Intent(MainActivity.this, StartPage.class));
+                //startActivity(new Intent(MainActivity.this, GoogleSignIn.class));
+                startActivity(new Intent(MainActivity.this, ImageToPdf.class));
                 finish();
             }, 1500);
 

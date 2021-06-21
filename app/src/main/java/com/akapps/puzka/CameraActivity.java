@@ -195,6 +195,9 @@ public class CameraActivity extends AppCompatActivity {
             imageCapture.setFlashMode(ImageCapture.FLASH_MODE_AUTO);
         }
 
+
+
+
         String filename = new SimpleDateFormat("dd-M-yyyy hh:mm:ss", Locale.US).format(System.currentTimeMillis()) + ".jpg";
         File file = new File(CameraActivity.this.getExternalFilesDir(null), filename);
         ImageCapture.OutputFileOptions outputFileOptions = new
@@ -204,10 +207,13 @@ public class CameraActivity extends AppCompatActivity {
                 new ImageCapture.OnImageSavedCallback() {
                     @Override
                     public void onImageSaved(@NotNull ImageCapture.OutputFileResults outputFileResults) {
-                        Toast.makeText(CameraActivity.this, "Successfully Saved!", Toast.LENGTH_SHORT).show();
+
                         sharedPreferences.edit().putString("Imagename", filename).apply();
-                        new Handler(Looper.getMainLooper()).postDelayed(() -> startActivity(new Intent(CameraActivity.this,
-                                ImageProcessing.class)), 500);
+                        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                            startActivity(new Intent(CameraActivity.this,
+                                    ImageProcessing.class));
+                            CameraActivity.this.finish();
+                        }, 500);
                     }
                     @Override
                     public void onError(@NotNull ImageCaptureException error) {

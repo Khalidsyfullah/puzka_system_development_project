@@ -37,25 +37,51 @@
         android:paddingEnd="10dp"
         android:paddingBottom="8dp"
         android:scrollHorizontally="true"
-        android:text="@string/a13"
+        android:text="@string/c96"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.theartofdev.edmodo.cropper.CropImageView
-        android:id="@+id/cropImageView"
-        android:layout_width="0dp"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView135"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/coda"
+                android:padding="5dp"
+                android:textColor="#222222"
+                android:textSize="16sp" />
+
+            <com.theartofdev.edmodo.cropper.CropImageView
+                android:id="@+id/cropImageView"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="60dp" >
+
+            </com.theartofdev.edmodo.cropper.CropImageView>
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -119,6 +145,19 @@
             android:background="@color/white"
             android:drawableTop="@drawable/ic_check"
             android:onClick="onCheckedClicked"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+        <Button
+            android:id="@+id/button45"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableTop="@drawable/ic_ocr"
+            android:onClick="onOcrClicked"
             android:paddingTop="5dp"
             android:paddingBottom="5dp" />
     </LinearLayout>

@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/NewApp"
         tools:ignore="AllowBackup">
-        <activity android:name=".AuthenticatorActivity"></activity>
+        <activity android:name=".PdfAllVal"></activity>
+        <activity android:name=".AuthenticatorActivity" />
         <activity android:name=".GoogleSignIn" />
         <activity android:name=".StartPage" />
         <activity android:name=".NotesActivity" />
@@ -52,6 +53,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr" />
     </application>
 
 </manifest>

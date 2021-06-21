@@ -216,4 +216,6 @@
     <string name="c93">Save</string>
     <string name="c94">Enter Current Password</string>
     <string name="c95">Enter New Password</string>
+    <string name="c96">Edit Image</string>
+    <string name="c97">Document</string>
 </resources>

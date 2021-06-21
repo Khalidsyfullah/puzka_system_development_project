@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +15,16 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.securepreferences.SecurePreferences;
+
 import java.io.File;
 
 public class ImageToPdf extends AppCompatActivity {
     File file;
     GridView gridView ;
     boolean ff = false;
+    SharedPreferences sharedPreferences;
+    int count = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,24 +33,26 @@ public class ImageToPdf extends AppCompatActivity {
         if(!file.exists()){
             ff = file.mkdirs();
         }
+        sharedPreferences = new SecurePreferences(this);
         gridView = findViewById(R.id.grid_tou);
         File[] files = file.listFiles();
         if(files != null && file.length() > 0){
-
+            gridView.setAdapter(new GridPdfList(files));
+            count = files.length;
         }
 
     }
 
     class GridPdfList extends BaseAdapter{
-        File[] file;
+        File[] fileList;
 
         public GridPdfList(File[] file) {
-            this.file = file;
+            this.fileList = file;
         }
 
         @Override
         public int getCount() {
-            return file.length;
+            return fileList.length;
         }
 
         @Override
@@ -61,18 +70,34 @@ public class ImageToPdf extends AppCompatActivity {
             @SuppressLint({"ViewHolder", "InflateParams"}) View view = getLayoutInflater().inflate(R.layout.grid_pdfvals, null);
             ImageView imageView = view.findViewById(R.id.imageView3);
             TextView textView = view.findViewById(R.id.textView127);
-            textView.setText(file[position].getName());
+            String filername = fileList[position].getName();
+            textView.setText(filername);
             try{
-                //File file1 = new File(file, "")
+                File file1 = new File(file, filername+"/img0.jpeg");
+                Bitmap myBitmap = BitmapFactory.decodeFile(file1.getAbsolutePath());
+                imageView.setImageBitmap(myBitmap);
             }catch (Exception ignored){
 
             }
+            view.setOnClickListener(v -> {
+                sharedPreferences.edit().putString("filenameList", fileList[position].getName()).apply();
+                startActivity(new Intent(ImageToPdf.this, PdfAllVal.class));
+                finish();
+            });
+
             return view;
         }
     }
 
 
     public void onCameraClicked(View view){
-        startActivity(new Intent(ImageToPdf.this, CameraActivity.class));
+        String str = "pdf"+ count;
+        sharedPreferences.edit().putString("filenameList", str).apply();
+        File file2 = new File(file, str);
+        if(!file2.exists()){
+            ff = file2.mkdirs();
+        }
+        startActivity(new Intent(ImageToPdf.this, PdfAllVal.class));
+        finish();
     }
 }
