@@ -6,10 +6,6 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28"
-        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/NewApp"
         tools:ignore="AllowBackup">
-        <activity android:name=".PdfAllVal"></activity>
+        <activity android:name=".PdfAllVal" />
         <activity android:name=".AuthenticatorActivity" />
         <activity android:name=".GoogleSignIn" />
         <activity android:name=".StartPage" />

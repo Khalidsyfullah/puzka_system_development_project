@@ -58,11 +58,6 @@ public class Centerpage extends AppCompatActivity {
 
             }
         });
-
-        if (ContextCompat.checkSelfPermission(Centerpage.this, Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(Centerpage.this, new String[] {Manifest.permission.CAMERA}, 101);
-        }
     }
 
 

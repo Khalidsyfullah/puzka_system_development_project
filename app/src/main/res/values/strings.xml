@@ -218,4 +218,12 @@
     <string name="c95">Enter New Password</string>
     <string name="c96">Edit Image</string>
     <string name="c97">Document</string>
+    <string name="c98">Backup Status:</string>
+    <string name="c99">Backup Now</string>
+    <string name="c100">Apply</string>
+    <string name="c101">Notifications &amp; Settings: </string>
+    <string name="c102">Login Authentication</string>
+    <string name="c103">Daily Routine Reminder</string>
+    <string name="c104">Transaction Reminder</string>
+    <string name="c105">Diary Reminder</string>
 </resources>

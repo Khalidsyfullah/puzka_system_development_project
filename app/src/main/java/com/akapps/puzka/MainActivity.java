@@ -37,8 +37,13 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             new Handler(Looper.getMainLooper()).postDelayed(() -> {
-                //startActivity(new Intent(MainActivity.this, GoogleSignIn.class));
-                startActivity(new Intent(MainActivity.this, ImageToPdf.class));
+                boolean f = sharedPreferences.getBoolean("nnnVal1", true);
+                if(f){
+                    startActivity(new Intent(MainActivity.this, GoogleSignIn.class));
+                }
+                else{
+                    startActivity(new Intent(MainActivity.this, Centerpage.class));
+                }
                 finish();
             }, 1500);
 

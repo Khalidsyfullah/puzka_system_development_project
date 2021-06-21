@@ -1,10 +1,14 @@
 package com.akapps.puzka;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -41,6 +45,10 @@ public class ImageToPdf extends AppCompatActivity {
             count = files.length;
         }
 
+        if (ContextCompat.checkSelfPermission(ImageToPdf.this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(ImageToPdf.this, new String[] {Manifest.permission.CAMERA}, 101);
+        }
     }
 
     class GridPdfList extends BaseAdapter{

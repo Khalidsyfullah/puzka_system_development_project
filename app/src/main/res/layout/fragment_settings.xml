@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E4E4E4">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +15,11 @@
             android:id="@+id/lin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/g1"
             android:orientation="vertical">
 
 
@@ -128,9 +133,9 @@
                 android:id="@+id/button42"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="10dp"
                 android:fontFamily="@font/arbutus_slab"
                 android:text="@string/c87"
                 android:textSize="17sp" />
@@ -139,9 +144,9 @@
                 android:id="@+id/button43"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="10dp"
                 android:backgroundTint="#3F51B5"
                 android:fontFamily="@font/arbutus_slab"
                 android:text="@string/c93"
@@ -151,15 +156,138 @@
                 android:id="@+id/button44"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="10dp"
                 android:backgroundTint="#6E0000"
                 android:fontFamily="@font/arbutus_slab"
                 android:text="@string/c89"
                 android:textSize="17sp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/g1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView140"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="@string/c98"
+                android:textColor="#001278"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView141"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arbutus_slab"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="#3A3A3A" />
+
+            <Button
+                android:id="@+id/button46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#009688"
+                android:padding="5dp"
+                android:text="@string/c99" />
+
+            <Button
+                android:id="@+id/button47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#03A9F4"
+                android:padding="5dp"
+                android:text="@string/c100" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/g1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView143"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="@string/c101"
+                android:textColor="#001278"
+                android:textSize="22sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                style="@android:style/Widget.Material.CompoundButton.CheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/electrolize"
+                android:text="@string/c102"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                style="@android:style/Widget.Material.CompoundButton.CheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/electrolize"
+                android:text="@string/c103"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                style="@android:style/Widget.Material.CompoundButton.CheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/electrolize"
+                android:text="@string/c104"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                style="@android:style/Widget.Material.CompoundButton.CheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/electrolize"
+                android:text="@string/c105"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
 
 
     </LinearLayout>
