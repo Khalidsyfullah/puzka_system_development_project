@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ash"
     tools:context=".WaletCenterpage">
 
     <com.google.android.material.tabs.TabLayout
@@ -13,6 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:tabBackground="@color/white"
         app:tabIndicatorColor="#FFFFFF"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="-2dp"
@@ -61,21 +63,12 @@
         android:id="@+id/textView73"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center|start"
+        android:background="@color/r13"
+        android:gravity="center"
         android:text="@string/b48"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView74"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView74"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
-        android:paddingTop="10dp"
-        app:drawableTopCompat="@drawable/ic_arrow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

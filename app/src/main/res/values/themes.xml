@@ -65,7 +65,7 @@
 
     <style name="Material1" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/r4</item>
-        <item name="colorPrimaryDark">@color/r5</item>
+        <item name="colorPrimaryDark">#81002C</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
     </style>
@@ -73,6 +73,48 @@
     <style name="Material2" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/r6</item>
         <item name="colorPrimaryDark">@color/r6</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="Material3" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/r7</item>
+        <item name="colorPrimaryDark">@color/r8</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="Material4" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/r9</item>
+        <item name="colorPrimaryDark">@color/r10</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="Material5" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/r11</item>
+        <item name="colorPrimaryDark">@color/r12</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="Material6" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/r13</item>
+        <item name="colorPrimaryDark">@color/r14</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="Material7" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/r15</item>
+        <item name="colorPrimaryDark">@color/r16</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="Normal" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/r15</item>
+        <item name="colorPrimaryDark">@color/r16</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
     </style>

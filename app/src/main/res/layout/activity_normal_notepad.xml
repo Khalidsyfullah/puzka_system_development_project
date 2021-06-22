@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ash"
     tools:context=".NormalNotepad">
 
 
@@ -11,7 +12,7 @@
         android:id="@+id/linearLayout4"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/r8"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +23,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
             android:fontFamily="@font/monda"
             android:gravity="center"
             android:paddingStart="55dp"
@@ -35,7 +35,6 @@
             android:id="@+id/textView34"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@color/colorPrimary"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             app:drawableTopCompat="@drawable/ic_save_img" />
@@ -45,12 +44,12 @@
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/gray"
+        android:background="@drawable/f7"
         android:ems="10"
         android:fontFamily="@font/donegal_one"
         android:hint="@string/a22"
         android:inputType="textPersonName"
-        android:padding="7dp"
+        android:padding="10dp"
         android:textColor="#121212"
         android:textColorHint="#5C5C5C"
         android:textSize="18sp"

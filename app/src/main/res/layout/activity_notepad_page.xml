@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F4F4"
+    android:background="@color/ash"
     tools:context=".NotepadPage">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@color/r8"
         android:fontFamily="@font/monda"
         android:gravity="center|start"
         android:paddingStart="15dp"
         android:paddingEnd="5dp"
         android:text="@string/a18"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/textView42"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,8 @@
     <TextView
         android:id="@+id/textView7"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@color/r8"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
         app:drawableTopCompat="@drawable/ic_search"
@@ -37,8 +37,8 @@
     <TextView
         android:id="@+id/textView8"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@color/r8"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
         app:drawableTopCompat="@drawable/ic_more"
@@ -48,8 +48,8 @@
     <TextView
         android:id="@+id/textView42"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@color/r8"
         android:paddingTop="7dp"
         android:paddingBottom="7dp"
         app:drawableTopCompat="@drawable/ic_reload_sync"
@@ -59,10 +59,8 @@
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
+        android:layout_height="45dp"
+        android:background="@color/white"
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +69,9 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
             android:orientation="vertical">
 
             <com.google.android.material.chip.ChipGroup

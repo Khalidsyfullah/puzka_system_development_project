@@ -20,7 +20,7 @@ public class WaletCenterpage extends AppCompatActivity {
     String[] strings = new String[]{"Transactions", "Summary"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Material);
+        setTheme(R.style.Material6);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_walet_centerpage);
         tabLayout = findViewById(R.id.tablayout);

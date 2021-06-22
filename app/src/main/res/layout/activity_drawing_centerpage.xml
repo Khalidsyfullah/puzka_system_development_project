@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ash"
     tools:context=".DrawingCenterpage">
 
     <TextView
         android:id="@+id/textView71"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@color/r11"
         android:paddingTop="7dp"
         android:paddingBottom="7dp"
         app:drawableTopCompat="@drawable/ic_reload_sync"
@@ -20,8 +21,8 @@
     <TextView
         android:id="@+id/textView67"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@color/r11"
         android:padding="10dp"
         app:drawableStartCompat="@drawable/ic_arrow"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,8 +31,8 @@
     <TextView
         android:id="@+id/textView68"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@color/r11"
         android:fontFamily="@font/coda"
         android:paddingStart="15dp"
         android:paddingTop="8dp"
@@ -46,7 +47,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <GridView
         android:id="@+id/grid_draw"
         android:layout_width="0dp"
@@ -58,7 +58,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView68" >
+        app:layout_constraintTop_toBottomOf="@+id/textView68">
 
     </GridView>
 
@@ -73,5 +73,5 @@
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_add_drawing" />
+        app:srcCompat="@drawable/ic_baseline_add_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

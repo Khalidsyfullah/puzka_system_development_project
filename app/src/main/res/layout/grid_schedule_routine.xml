@@ -16,7 +16,7 @@
         android:paddingTop="8dp"
         android:paddingEnd="8dp"
         android:paddingBottom="2dp"
-        android:textColor="#2196F3"
+        android:textColor="#535353"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -35,7 +35,7 @@
             android:fontFamily="@font/arbutus_slab"
             android:padding="3dp"
             android:text="@string/c61"
-            android:textColor="#2196F3"
+            android:textColor="#3A3A3A"
             android:textSize="16sp"
             android:textStyle="bold" />
 

@@ -12,6 +12,6 @@
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/merienda_one"
         android:padding="5dp"
-        android:textColor="#0067B8"
+        android:textColor="#1E1E1E"
         android:textSize="20sp" />
 </LinearLayout>

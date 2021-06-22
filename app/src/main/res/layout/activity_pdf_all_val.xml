@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ash"
     tools:context=".PdfAllVal">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -41,8 +42,8 @@
     <TextView
         android:id="@+id/textView139"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@color/r15"
         android:fontFamily="@font/coda"
         android:paddingStart="15dp"
         android:paddingTop="8dp"
@@ -73,8 +74,8 @@
     <TextView
         android:id="@+id/textView138"
         android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@color/r15"
         android:paddingTop="10dp"
         android:paddingBottom="5dp"
         app:drawableTopCompat="@drawable/ic_pdf"

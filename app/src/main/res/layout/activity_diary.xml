@@ -8,21 +8,12 @@
 
 
     <TextView
-        android:id="@+id/textView22"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
-        android:padding="10dp"
-        app:drawableStartCompat="@drawable/ic_arrow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView23"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/coda"
+        android:gravity="center"
         android:paddingStart="15dp"
         android:paddingTop="8dp"
         android:paddingEnd="10dp"
@@ -32,7 +23,7 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/textView22"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View

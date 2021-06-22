@@ -44,6 +44,7 @@ public class PdfAllVal extends AppCompatActivity {
     ActivityResultLauncher<Intent> resultLauncher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Normal);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_all_val);
         textView = findViewById(R.id.textView138);

@@ -31,6 +31,7 @@ public class ImageToPdf extends AppCompatActivity {
     int count = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Material7);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_to_pdf);
         file = new File(getExternalFilesDir(null), "PdfFiles");

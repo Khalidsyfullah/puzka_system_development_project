@@ -33,6 +33,7 @@ public class NormalNotepad extends AppCompatActivity {
     DocumentClass documentClass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Material4);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_normal_notepad);
         title = findViewById(R.id.title);

@@ -226,4 +226,7 @@
     <string name="c103">Daily Routine Reminder</string>
     <string name="c104">Transaction Reminder</string>
     <string name="c105">Diary Reminder</string>
+    <string name="c106">Hi! Puzka Here>:</string>
+    <string name="c107">No Tasks Today! It\'s chilling time....</string>
+    <string name="c108">Permanent Notification</string>
 </resources>

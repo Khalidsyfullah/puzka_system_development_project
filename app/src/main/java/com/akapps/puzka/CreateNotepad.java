@@ -59,6 +59,7 @@ public class CreateNotepad extends AppCompatActivity {
     DocumentClass documentClass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Material4);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_notepad);
         frameLayout = findViewById(R.id.frame_pop);

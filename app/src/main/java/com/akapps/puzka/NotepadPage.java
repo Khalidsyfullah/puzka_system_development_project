@@ -49,7 +49,7 @@ public class NotepadPage extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Material);
+        setTheme(R.style.Material4);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notepad_page);
         fab1 = findViewById(R.id.floatingActionButton);

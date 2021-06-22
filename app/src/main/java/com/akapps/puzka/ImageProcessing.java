@@ -39,6 +39,7 @@ public class ImageProcessing extends AppCompatActivity {
     boolean fff = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Material7);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_processing);
         cropImageView = findViewById(R.id.cropImageView);

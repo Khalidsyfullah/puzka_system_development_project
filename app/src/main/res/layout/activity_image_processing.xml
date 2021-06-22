@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/ash"
     tools:context=".ImageProcessing">
 
     <View
@@ -20,7 +20,7 @@
         android:id="@+id/textView4"
         android:layout_width="60dp"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/r15"
         android:padding="10dp"
         app:drawableStartCompat="@drawable/ic_arrow"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,7 @@
         android:id="@+id/textView5"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/r15"
         android:fontFamily="@font/coda"
         android:paddingStart="15dp"
         android:paddingTop="8dp"
@@ -55,7 +55,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView135"
@@ -67,7 +67,7 @@
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/coda"
                 android:padding="5dp"
-                android:textColor="#222222"
+                android:textColor="#00106A"
                 android:textSize="16sp" />
 
             <com.theartofdev.edmodo.cropper.CropImageView
@@ -77,7 +77,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="60dp" >
+                android:layout_marginBottom="60dp">
 
             </com.theartofdev.edmodo.cropper.CropImageView>
         </LinearLayout>
@@ -89,7 +89,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="5dp"
         android:background="@color/white"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"

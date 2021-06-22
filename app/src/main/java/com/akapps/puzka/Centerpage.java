@@ -1,15 +1,13 @@
 package com.akapps.puzka;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -19,13 +17,14 @@ public class Centerpage extends AppCompatActivity {
     String defaultColor = "#000000";
     String selectedColor = "#00bbd3";
     TabLayout tabLayout;
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Material1);
+        setTheme(R.style.Material3);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_centerpage);
         tabLayout = findViewById(R.id.tablayout);
-
+        textView = findViewById(R.id.textView115);
         TabLayout.Tab tab1 = tabLayout.getTabAt(0);
         if(tab1 != null){
             tab1.select();
@@ -58,9 +57,25 @@ public class Centerpage extends AppCompatActivity {
 
             }
         });
+
+        textView.setOnClickListener(v -> setBackPressed());
+
     }
 
+    @Override
+    public void onBackPressed() {
+        setBackPressed();
+    }
 
+    void setBackPressed()
+    {
+        AlertDialog alertDialog = new AlertDialog.Builder(Centerpage.this)
+                .setMessage("Are you sure to Exit This app?")
+                .setPositiveButton("Yes", (dialog, which) -> Centerpage.this.finish())
+                .setNegativeButton("No", (dialog, which) -> dialog.dismiss()).create();
+
+        alertDialog.show();
+    }
 
 
 

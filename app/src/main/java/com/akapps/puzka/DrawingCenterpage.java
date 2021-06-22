@@ -37,7 +37,7 @@ public class DrawingCenterpage extends AppCompatActivity {
     int id_num_toDelete = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Material);
+        setTheme(R.style.Material5);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawing_centerpage);
         sharedPreferences = new SecurePreferences(this);
@@ -49,6 +49,9 @@ public class DrawingCenterpage extends AppCompatActivity {
         sync_text.setOnClickListener(v -> updateDrawableList());
         backButton.setOnClickListener(v -> finish());
         fab.setOnClickListener(v -> startActivity(new Intent(DrawingCenterpage.this, DrawingActivity.class)));
+
+        backButton.setOnClickListener(v -> finish());
+
     }
 
     @Override
@@ -169,10 +172,12 @@ public class DrawingCenterpage extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.popup_confirmsave);
             String tx1 = "Are you sure to delete this File? ";
+            String tx2 = "Confirm Delete";
             TextView textView = findViewById(R.id.textView41);
             TextView cancel = findViewById(R.id.textView29);
+            TextView textView1 = findViewById(R.id.textView6);
             this.setCancelable(false);
-
+            textView1.setText(tx2);
             Button bt1 = findViewById(R.id.button17);
             Button bt2 = findViewById(R.id.button15);
 
